@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #f0f2f5;
+    --primary-text-color: #2C3E50;
+    --available-text-color: #27AE60;
+    --not-available-text-color: #E74C3C;
+}
+body {
+    background: whitesmoke;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    color: var(--primary-text-color, blue);
+    font-size: 30px;
+    width: 100vw;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.overall-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    height: 90%;
+    width: 70%;
+}
+
+.content {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(60,60,100,0.15);
+    border-radius: 10px;
+}
+
+/* search bar */
+.search-bar{
+    width: 70%;
+    height: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* placeholder in searchbar */
+::placeholder{
+    font-size: 17px;
+    font-style: italic;
+}
+
+/* table styling */
