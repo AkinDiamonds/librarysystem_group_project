@@ -112,7 +112,7 @@ function removeBook(id) {
 function toggleStatus(id) {
     let books = loadBooks();
     books = books.map(book => {
-        if (book.id === id) {
+        if (book.id === id) {~
             book.available = !book.available;
         }
         return book;
