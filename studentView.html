@@ -16,40 +16,25 @@
             <h2>
                 Welcome, Student.
             </h2>
-            <input type="text" class="search-bar" onclick="searchBooks()" placeholder="Search by Title or Author">
-            <table id="book-list">
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Year</th>
-                    <th>Availability</th>
-                </tr>
-                <tr>
-                    <td>hf</td>
-                    <td>fh</td>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                </tr>
-                <tr>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                </tr>
-                <tr>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                </tr>
-                <tr>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                    <td>fjf</td>
-                </tr>
-            </table>
+            <input type="text" class="search-bar" oninput="displayBooks(this.value)" placeholder="Search by Title or Author">
+            <div class="table-wrapper">
+                <table class="table-container">
+                    <thead class="title-row-container">
+                        <tr class="title-row">
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Year</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody class="book-list">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

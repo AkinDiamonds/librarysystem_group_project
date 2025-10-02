@@ -9,13 +9,16 @@
 }
 
 :root {
-    --primary-color: #f0f2f5;
-    --primary-text-color: #2C3E50;
+    --primary-color: #FFFFF0;
+    --primary-text-color: black;
     --available-text-color: #27AE60;
     --not-available-text-color: #E74C3C;
 }
 body {
-    background: whitesmoke;
+    background-image: url('https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg');
+    opacity: 0.92;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -26,9 +29,19 @@ body {
     width: 100vw;
 }
 
+
 .header{
     display: flex;
     align-items: center;
+    color: white;
+    bottom: 20px; /* Adjust text position */
+    left: 20px;
+    text-shadow: black 0px 0px 15px;
+    font-family: sans-serif; /* Good readable font */
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 10px;
+    z-index: 1;
 }
 
 .overall-container{
@@ -59,12 +72,182 @@ body {
     height: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 /* placeholder in searchbar */
 ::placeholder{
-    font-size: 17px;
+    font-size: 18px;
     font-style: italic;
 }
 
 /* table styling */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  width: 25%;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 8px;
+}
+th {
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+  position: sticky;
+  top: 0;
+  background-color: #fef2dc;
+}
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+  font-size: 18px;
+}
+.book-list {
+  max-height: none;
+}
+
+
+/* dashboard */
+body.dashboard {
+    background: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Container alignment */
+.overall-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Content box styling */
+.content {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); 
+}
+
+/* Add Book Form */
+.add-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.add-book-form input, 
+.add-book-form select, 
+.add-book-form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.add-book-form button {
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.add-book-form button:hover {
+    background-color: #1a242f;
+}
+
+/* action buttons */
+.book-list button {
+    padding: 5px 10px;
+    font-size: 11px;
+    margin: 2px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* available button */
+.book-list button:first-child {
+    background-color: #27AE60;
+    color: white;
+}
+.book-list button:first-child:hover {
+    background-color: #1e874b;
+}
+
+/* Delete button */
+.book-list button:last-child {
+    background-color: #E74C3C;
+    color: white;
+}
+.book-list button:last-child:hover {
+    background-color: #c0392b;
+}
+
+.book-section input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    width: 100%;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-header button {
+    background: #e74c3c;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dashboard-header button:hover {
+    background: #c0392b;
+}

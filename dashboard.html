@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard">
+    <div class="overall-container">
+        <div class="dashboard-header">
+            <h2>Librarian Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="content">
+            <h3>Add a New Book</h3>
+            <form id="addBookForm" onsubmit="Add(event)">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="number" id="year" placeholder="Year" required>
+                <select id="available">
+                    <option value="true">Available</option>
+                    <option value="false">Checked Out</option>
+                </select>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <div class="book-section">
+            <h3>All Books</h3>
+            <input type="text" id="search" placeholder="Search by Title or Author" oninput="displayBooks(this.value)">
+
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>Availability</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="book-list"></tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            function Add(e) {
+                e.preventDefault();
+                let title = document.getElementById("title").value;
+                let author = document.getElementById("author").value;
+                let year = document.getElementById("year").value;
+                let available = document.getElementById("available").value === "true";
+
+                addBook(title, author, year, available);
+                document.getElementById("addBookForm").reset();
+            }
+
+            if (localStorage.getItem("isLoggedIn") !== "true") {
+                window.location.href = "login.html";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
